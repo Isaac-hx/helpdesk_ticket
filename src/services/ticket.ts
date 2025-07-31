@@ -1,7 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import type { Ticket, TicketList } from "../types/ticket";
 import { PostgrestError } from "@supabase/supabase-js"; // pastikan ini diimport
-import {  generateCustomUuid } from "custom-uuid";
 
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY);
 

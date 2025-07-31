@@ -9,7 +9,6 @@ import { Link, useParams } from "react-router"
 import { getTicketById, updateStatusTicket } from "../services/ticket"
 import type{ Ticket } from "../types/ticket"
 import formatToLocalDateTime from "../utils/convertTime"
-import { getCookie } from "../helper/getCookie"
 
 
 

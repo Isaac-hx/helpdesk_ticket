@@ -31,7 +31,6 @@ const getStatusColor = (status: string | undefined) => {
 export default function DetailWork() {
   const {ticket_id} = useParams()
   const [ticketDetail, setTicketDetail] = useState<Ticket>()
-  const [isLogin,setIsLogin] = useState(false)
   useEffect(()=>{
 
 
@@ -205,10 +204,10 @@ export default function DetailWork() {
           <CardFooter className="bg-gray-50 border-t">
             <div className="flex flex-col sm:flex-row gap-3 w-full">
   
-              <Link className="flex items-center w-full  border-2  p-1 rounded-md justify-center flex-1 bg-transparent" to={`${isLogin === true ? "/dashboard-helpdesk" :"/"}`}>
+              <Link className="flex items-center w-full  border-2  p-1 rounded-md justify-center flex-1 bg-transparent" to={`/`}>
                 <ArrowLeft size={16} className="mr-2" />
-                {isLogin ? "Back to dashboard": "Back to list"}
-              </Link>
+                  Back to list
+                </Link>
   {ticketDetail?.ticket_status === "progress" ? (
   <Button
     className="flex-1 bg-emerald-600 hover:bg-emerald-700"
